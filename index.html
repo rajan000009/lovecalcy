@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compalible" content="IE=enge">
+    <meta name="viewport" content="width=device=width, initial-sca">
+    <title>wallcome to love calculator</title>
+<style>
+    
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+.text-red{
+    color: red;
+}
+.header{
+    display: inline-block;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(156, 61, 61);
+    margin-bottom: 20px;
+}
+
+body{position: relative;
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(292006.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.card{
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-top: 150px;
+}
+
+.love-grup{
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+
+    
+    
+}
+.plas{
+    padding: 10px;
+}
+.raja{
+
+    font-weight: 500;
+    padding: 0.5em 1.5rem;
+    margin:0.5em 0 ;
+    background-color: palevioletred;
+}
+.result{
+    text-align: center;
+    width: 25%;
+    margin: auto;
+}
+.footer{
+    font-size: large;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <section>
+<div class="card">
+    <div class="header">LOVE CALCULATOR</div>
+
+    <div class="body">
+<form class="love-form">
+    <div class="love-grup">
+        <input type="text" name="" class="form-control" placeholder="your name" id="name">
+    </div>
+    <div class="love-grup"> <samp class="plas">+</samp></div>
+    <div class="love-grup">
+        <input type="text" name="" class="form-control" placeholder="love name" id="lname">
+    </div>
+
+</form>
+<br>
+
+<div class="button">
+    <button class="raja" onclick="checklove()">click</button>
+</div>
+    <br>
+    <div result>
+        <input type="text" id="lovevalue" placeholder="love percentage"  >
+    </div>
+
+    <div class="footer">god bless your ralationship</div>
+        
+</div>
+        
+</section>
+
+    <script>
+
+        function checklove(){
+
+        var name = document.getElementById('name').value;
+        var lname = document.getElementById('lname').value;
+        
+        if(name == ""){
+            alert('please enter your love name');
+        } else if(name.length <=2){
+            alert('please enter required name')
+        }
+        
+        if(lname == ""){
+            alert('please enter your name');
+        } else if(lname.length <=2){
+            alert('please enter required name')
+        }
+        else{ var lovedata = Math.random() * 100;
+        lovedata = Math.floor(lovedata);
+        document.getElementById('lovevalue').value = lovedata + "%";
+        }
+
+        
+        }
+    </script>
+
+    
+</body>
+
+</html>
